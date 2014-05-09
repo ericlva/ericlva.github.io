@@ -5,65 +5,124 @@
 	<title>Document</title>
 	<style type="text/css">
 		  * {margin: 0;padding:0;}
+		  body {background:black;margin-top: 80px;}
 		  .mod {
 		  	width:356px;
 		  	height:512px;
 		  	margin:auto;
-		  	background: url(loading.png) no-repeat;background-size: 356px 512px;
+		  	position: relative;
+		  	background: url(loading.png) no-repeat;
+		  	background-size: 356px 512px;
 		  }
+		  .mod div {position: absolute;background: url(steps.png) no-repeat;background-size: 600px 500px;}
 	      .steps1 {
-	      	width:170px;
-	      	height: 228px;
-	      	background: url(steps.png) no-repeat;
+	      	width:85px;
+	      	height: 114px;
+	      	left: 38px;
+	      	bottom:106px;
+	      	-webkit-animation:steps1 1s step-end infinite;
 	      	/*-webkit-animation-name: steps-i1, move; 
 			-webkit-animation-duration: 1s, 10s;   
 			-webkit-animation-direction: normal, normal;
 			-webkit-animation-iteration-count: infinite,infinite;
 			-webkit-animation-timing-function:  step-end,linear;*/
-			-webkit-animation:steps1 1s step-end infinite;
+	      }
+	      .steps2 {
+	      	width:45px;
+	      	height: 62px;
+	      	position: absolute;
+	      	left: 126px;
+	      	bottom:124px;
+			-webkit-animation:steps2 750ms step-end infinite;
+	      }
+	      .steps3 {
+	      	width:45px;
+	      	height: 62px;
+	      	position: absolute;
+	      	left: 168px;
+	      	bottom:118px;
+			-webkit-animation:steps3 270ms step-end infinite;
 	      }
 	      @-webkit-keyframes steps1 {
 	      	 0% {
 				 background-position: 0 0;
 	      	 }
 	      	 10% {
-				 background-position: -170px 0;
+				 background-position: -85px 0;
 	      	 }
 	      	 20% {
-				 background-position: -340px 0;
+				 background-position: -170px 0;
 	      	 }
 	      	 30% {
-				 background-position: -510px 0;
+				 background-position: -255px 0;
 	      	 }
 	      	 40% {
-				 background-position: -680px 0;
+				 background-position: -340px 0;
 	      	 }
 	      	 50% {
-				 background-position: -850px 0;
+				 background-position: -425px 0;
 	      	 }
 	      	 60% {
-				 background-position: 0 -228px;
+				 background-position: 0 -114px;
 	      	 }
 	      	 70% {
-				 background-position: -170px -228px;
+				 background-position: -85px -114px;
 	      	 }
 	      	 80% {
-				 background-position: -340px -228px;
+				 background-position: -170px -114px;
 	      	 }
 	      	 90% {
-				 background-position: -510px -228px;
+				 background-position: -255px -114px;
 	      	 }
 	      	 100% {
-				 background-position: -680px -228px;
+				 background-position: -340px -114px;
+	      	 }
+	      }
+	      @-webkit-keyframes steps2 {
+	      	 0% {
+				 background-position: 0 -228px;
+	      	 }
+	      	 16.666% {
+				 background-position: -45px -228px;
+	      	 }
+	      	 32.332% {
+				 background-position: -90px -228px;
+	      	 }
+	      	 49.998% {
+				 background-position: -135px -228px;
+	      	 }
+	      	 66.664% {
+				 background-position: -180px -228px;
+	      	 }
+	      	 83.333% {
+				 background-position: -225px -228px;
+	      	 }
+	      	 100% {
+				 background-position: -270px -228px;
+	      	 }
+	      }
+	      @-webkit-keyframes steps3 {
+	      	 0% {
+				 background-position: 0 -290px;
+	      	 }
+	      	 50% {
+				 background-position: -90px -290px;
+	      	 }
+	      	 100% {
+				 background-position: -270px -290px;
 	      	 }
 	      }
 	</style>
 </head>
 <body>
 	<div class="mod">
-		 <div class="steps1">
-			 
-		 </div>
+		 <div class="steps1"></div>
+		 <div class="steps2"></div>
+		 <div class="steps3"></div>
+		 <div class="steps4"></div>
+		 <div class="steps5"></div>
+		 <div class="steps6"></div>
+		 <div class="steps7"></div>
 	</div>
 </body>
 </html>
