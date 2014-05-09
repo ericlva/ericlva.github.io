@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>爱消除 demo2</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; overflow-y:hidden;}
+    canvas { display: block; margin:0px auto;}
+    body{background: #252833;}
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/ani.js"></script>
+    <script src="js/game.js"></script>
+</head>
+<body>
+    <div class="view">
+        <canvas id="demoCanvas" width="320" height="480">您的浏览器不支持canvas</canvas>
+    </div>
+    <script>
+        window.onload = init;
+        function init(){
+            var game;
+            
+            //开始游戏
+            game = Game.init({"canvasID":"demoCanvas"});
+        }
+    </script>
+</body>
+</html>

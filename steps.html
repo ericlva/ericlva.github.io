@@ -14,7 +14,7 @@
 		  	background: url(loading.png) no-repeat;
 		  	background-size: 356px 512px;
 		  }
-		  .mod div {position: absolute;background: url(steps.png) no-repeat;background-size: 600px 500px;}
+		  .mod div {position: absolute;background: url(steps.png) no-repeat;background-size: 600px 750px;}
 	      .steps1 {
 	      	width:85px;
 	      	height: 114px;
@@ -32,7 +32,7 @@
 	      	height: 62px;
 	      	position: absolute;
 	      	left: 126px;
-	      	bottom:124px;
+	      	bottom:125px;
 			-webkit-animation:steps2 750ms step-end infinite;
 	      }
 	      .steps3 {
@@ -42,6 +42,22 @@
 	      	left: 168px;
 	      	bottom:118px;
 			-webkit-animation:steps3 270ms step-end infinite;
+	      }
+	      .steps4 {
+	      	width:45px;
+	      	height: 69px;
+	      	position: absolute;
+	      	left: 208px;
+	      	bottom:123px;
+			-webkit-animation:steps4 900ms step-end infinite;
+	      }
+	      .steps5 {
+	      	width:45px;
+	      	height: 69px;
+	      	position: absolute;
+	      	left: 241px;
+	      	bottom:106px;
+			-webkit-animation:steps5 900ms step-end infinite;
 	      }
 	      @-webkit-keyframes steps1 {
 	      	 0% {
@@ -110,6 +126,29 @@
 	      	 }
 	      	 100% {
 				 background-position: -270px -290px;
+	      	 }
+	      }
+	      @-webkit-keyframes steps4 {
+	      	 0% {
+				 background-position: 0 -342px;
+	      	 }
+	      	 16.666% {
+				 background-position: -45px -342px;
+	      	 }
+	      	 32.332% {
+				 background-position: -90px -342px;
+	      	 }
+	      	 49.998% {
+				 background-position: -135px -342px;
+	      	 }
+	      	 66.664% {
+				 background-position: -180px -342px;
+	      	 }
+	      	 83.333% {
+				 background-position: -225px -342px;
+	      	 }
+	      	 100% {
+				 background-position: -270px -342px;
 	      	 }
 	      }
 	</style>
