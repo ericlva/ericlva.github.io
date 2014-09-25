@@ -3,21 +3,21 @@ description:      'about SEO,Ruby,Linux,Mac and stuff'
 disqus_shortname: byzuo
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 # url:              http://localhost:4000
-url:              http://seoaqua.com
+url:              http://zuoby.com
 
 # Owner/author information
 owner:
-  name:           Charles Liu
+  name:           盟主
   avatar:         avatar.png
-  bio:            'SEO Director /SEM Tech Director in elong.com, Ruby programmer, MVT junior manager, Hadoop statistics junior programmer'
+  bio:            '没啥介绍，不会写'
   email:          334966829@qq.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
   github:         ericlva
   stackexchange:
-  linkedin:       ericlva
-  instagram:
+  linkedin:       
+  instagram:      ericlva
   flickr:
   tumblr:
   # For Google Authorship https://plus.google.com/authorship
@@ -38,13 +38,13 @@ links:
   - title: tags
     url: /tags/
   - title: my github
-    url: http://github.com/seoaqua/
+    url: http://github.com/ericlva/
     external: true
-  - title: my douban
-    url: http://www.douban.com/people/seoaqua/
+  - title: my blog
+    url: http://www.zuoby.com
     external: true
   - title: my weibo
-    url: http://weibo.com/seoaqua/
+    url: http://weibo.com/ericlva/
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
