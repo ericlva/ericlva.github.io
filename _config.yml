@@ -1,0 +1,63 @@
+title:            seoaqua's blog
+description:      'about SEO,Ruby,Linux,Mac and stuff'
+disqus_shortname: seoaqua
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+# url:              http://localhost:4000
+url:              http://seoaqua.com
+
+# Owner/author information
+owner:
+  name:           Charles Liu
+  avatar:         avatar.png
+  bio:            'SEO Director /SEM Tech Director in elong.com, Ruby programmer, MVT junior manager, Hadoop statistics junior programmer'
+  email:          seoaqua@qq.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:         seoaqua
+  stackexchange:
+  linkedin:       seoaqua
+  instagram:
+  flickr:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+# Background image to be tiled on all pages
+background: ps_neutral.png
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-5813412-15
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: tags
+    url: /tags/
+  - title: my github
+    url: http://github.com/seoaqua/
+    external: true
+  - title: my douban
+    url: http://www.douban.com/people/seoaqua/
+    external: true
+  - title: my weibo
+    url: http://weibo.com/seoaqua/
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Shanghai
+future:      true
+highlighter:    pygments
+markdown:    redcarpet
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
