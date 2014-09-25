@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "ruby activerecord 常见使用方法(不使用rails)"
+title: "马克飞象"
 date: 2014-02-10 01:55
 comments: true
 categories: ruby
 tags: [ruby,activerecord]
 ---
 
-# 欢迎使用马克飞象
 
 @(示例笔记本)[马克飞象|帮助|Markdown]
 
