@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content_id %}id="content-start"{% endblock %}
+
+{% block content %}
+
+<div class="post normal-post">
+  <h1 class="title">
+    {% if post.metadata.has_key('type') and post.metadata['type'] == 'refer' %}
+    <a class="refer-title" href="{{ post.metadata['refer_url'] }}" target="_blank">{{ post.title }}</a>
+    {% else %}
+    {{ post.title }}
+    {% endif %}
+    <a title="permanent link" class="perman-link" href="{{post.url}}#content-start">∞</a></h1>
+  <span class="date">{{ post.date | date('%B %d, %Y') }}</span>
+  {% if post.tags %}
+  <p class="tags">Tags:
+  {% for tag in post.tags %}
+  <a href="/tags/{{ tag }}">{{ tag }}</a>
+  {% endfor %}
+  {% endif %}
+  </p>
+
+  <div class="post-body">
+    {{ post | auto_content }}
+  </div>
+
+  <p class="eof">· EOF ·</p>
+</div>
+
+<div id="disqus_thread" class="comments"></div>
+{{ get_text_file('comment_js').raw_content }}
+
+{% endblock %}
