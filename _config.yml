@@ -1,6 +1,6 @@
-title:            盟主's blog
+title:            byzuo's blog
 description:      'about SEO,Ruby,Linux,Mac and stuff'
-disqus_shortname: byzuo
+disqus_shortname:  # byzuo
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 # url:              http://localhost:4000
 url:              http://ericlva.github.io
