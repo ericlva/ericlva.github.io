@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /about/
-title: About seoaqua
+title: About 
 tags: [SEO, SEM, MVT, Ruby, Hadoop, Analysis, Linux, Mac]
 image:
   feature: abstract-5.jpg
