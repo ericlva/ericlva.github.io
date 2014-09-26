@@ -12,10 +12,9 @@ owner:
   bio:            '没啥介绍，不会写'
   email:          334966829@qq.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
+  twitter:        ericlva
   facebook:
   github:         ericlva
-  weibo: http://weibo.com/ericlva/
   stackexchange:
   linkedin:       
   instagram:      ericlva
@@ -44,9 +43,9 @@ links:
   - title: my blog
     url: http://www.zuoby.com/
     external: true
-  #- title: my weibo
-  #  url: http://weibo.com/ericlva/
-  #  external: true
+  - title: my weibo
+    url: http://weibo.com/ericlva/
+    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
