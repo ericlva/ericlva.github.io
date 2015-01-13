@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	 * {margin: 0;padding: 0}
+	 body {font:400 14px/1.5 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei}
+	 section {width:200px;height:200px;margin:200px auto;-webkit-transform-style: preserve-3d; perspective:1000px;position: relative;-webkit-animation:roate 6s ease-in-out infinite alternate;-webkit-backface-visibility: hidden;will-change:animation;}
+	 figure {width:200px;height: 200px; line-height: 200px; position: absolute;color: #fff;font-size: 100px;text-align: center;border:2px solid black;}
+	 figure:nth-of-type(1) {background-color: rgba(255, 0,246,.6);-webkit-transform: translateZ( 100px );}
+	 figure:nth-of-type(2) {background-color: rgba(255,0,30,.6);-webkit-transform:rotateX( -180deg ) translateZ( 100px );;}
+	 figure:nth-of-type(3) {background-color: rgba(0, 246, 255,.6);-webkit-transform:rotateY(90deg) translateZ(100px)}
+	 figure:nth-of-type(4) {background-color: rgba(6, 255, 0,.6);-webkit-transform:rotateY(-90deg) translateZ(100px);}
+	 figure:nth-of-type(5) {background-color: rgba(252, 255, 0,.6);-webkit-transform: rotateX( 90deg ) translateZ( 100px );}
+	 figure:nth-of-type(6) {background-color: rgba(255, 243,58,.6);-webkit-transform: rotateX( -90deg ) translateZ(100px) ;}
+
+	 @-webkit-keyframes roate {
+	 	0% {
+	 		transform:rotateX(0deg) rotateY(0deg) translate3d(0,-900px,100px) scale3d(0,0,0);
+	 	}
+	 	100% {
+	 		transform:rotateX(360deg) rotateY(360deg) translate3d(100px,100px,0) scale3d(1.5,1.5,1.5);
+	 	}
+	 }
+	</style>
+</head>
+<body>
+	 <section>
+		 	  <figure>1</figure>
+		 	  <figure>2</figure>
+		 	  <figure>3</figure>
+		 	  <figure>4</figure>
+		 	  <figure>5</figure>
+		 	  <figure>6</figure>
+	 </section>
+
+
+</body>
+</html>
