@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>@盟主zuo-Animation</title>
+		<meta name="description" content="Sass + Compass写CSS">
+		<meta name="author" content="Eric.zuo">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- 这个容器的任何节元素里面显示为幻灯片 -->
+			<div class="slides">
+				<section>
+					<h1>动画</h1>
+					<h3>让体验更美好</h3>
+					<p>
+						<small>Created by <a href="http://www.zuoby.com">@盟主zuo</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Css3 有那些?</h2>
+						<ol>
+							<li class="fragment">Transform</li>
+							<li class="fragment">Transition</li>
+							<li class="fragment">Animation</li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>关注点</h2>
+						<ol>
+							<li class="fragment">使用</li>
+							<li class="fragment">区别</li>
+							<li class="fragment">性能</li>
+							<li class="fragment">坑</li>
+						</ol>
+					</section>
+					<section>
+						<h2>使 用</h2>
+						<p class="fragment"><img src="img/img1.jpg"></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Transform</h2>
+						<ol>
+							<li class="fragment">Translate3d()  3D移动</li>
+							<li class="fragment">Rotate()  旋转</li>
+							<li class="fragment">Scale() 缩放</li>
+							<li class="fragment">Skew() 倾斜</li>
+							<li class="fragment">Matrix() 矩阵变形</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Transform</h3>
+						<img src="img/img2.jpg" class="fragment">
+					</section>
+					<section>
+						<h3>Matrix 矩阵变形</h3>
+						<img src="img/img3.jpg" class="fragment">
+						<p class="fragment">
+							<a href="http://s.codepen.io/fta/fullembedgrid/ifnqH?type=embed&amp;animations=run" target="_blank">http://s.codepen.io/fta/fullembedgrid/ifnqH?type=embed&amp;animations=run matrix3d 4*4</a>
+							<a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/" target="_blank">https://dev.opera.com/articles/understanding-the-css-transforms-matrix/ 资料</a>
+							<a href="http://peterned.home.xs4all.nl/matrices/#-1.624,1.180,0.062,-0.676,51.793,-103.582" target="_blank">http://peterned.home.xs4all.nl/matrices/#-1.624,1.180,0.062,-0.676,51.793,-103.582 工具</a>
+						</p>
+					</section>
+					<section>
+						<h3>Transition</h3>
+						<img src="img/img4.jpg" class="fragment">
+
+						<div class="fragment"><p>过渡：[元素属性(可单个、多个、all ) ] [执行时间(s、ms) ] [延迟执行时间] [过度类型 (linear ease ease-in ease-in-out cubic-bezier) ]</p>
+					    <p><a href="http://matthewlein.com/ceaser/" target="_blank">http://matthewlein.com/ceaser/</a><br>
+<a href="http://cubic-bezier.com" target="_blank">http://cubic-bezier.com</a></p></div>
+					</section>
+					<section>
+						<h3>3D</h3>
+						<ul>
+							<li class="fragment">transform-style：preserve-3d + perspective 作用于子元素+ transform:translate3d(x,y,z(px)) 进行3d变换<br>
+<a href="http://ericlva.github.io/animation/3d.html" target="_blank">http://ericlva.github.io/animation/3d.html</a> </li>
+						</ul>
+					</section>
+					<section>
+						<h3>Animation</h3>
+						<img src="img/img5.jpg"  class="fragment">
+						<div class="fragment">
+						<a href="http://ericlva.github.io/animation/animation-fill-mode.html" target="_blank">http://ericlva.github.io/animation/animation-fill-mode.html</a><br>
+						<a href="http://ericlva.github.io/animation/steps.html" target="_blank">http://ericlva.github.io/animation/steps.html</a></div>
+					</section>
+					<section>
+						<h3>区别</h3>
+						<img src="img/img6.jpg" class="fragment">
+					</section>
+					<section>
+						<p class="fragment">Transform Transition 需要用户触发才能展示动态效果(:link、:hover、:active、:focus)或JS click focus事件，
+如果没有触发直接给元素设transform transition,则只能看到终止时的状态效果。Animation 无须触发，只需直接绑定即可。
+</p>
+					</section>
+					<section>
+						<h3>性能</h3>
+						<img src="img/img7.jpg" class="fragment">
+					</section>
+					<section>
+						<p class="fragment">使用position:absolute 、fixed做动画，避免发生渲染树的连带渲染行为，也就是Reflow(重排)、Repaint (重绘)</p>
+						<img src="img/img8.jpg" class="fragment">
+					</section>
+					<section>
+						<p class="fragment">启用GPU 加速</p>
+						<img src="img/img9.jpg" class="fragment">
+					</section>
+					<section>
+						<p class="fragment">CSS属性</p>
+						<ol>
+							<li class="fragment">避免不必要的复杂的CSS选择器，将消耗更多的CPU;</li>
+							<li class="fragment">Transform 优于 Left 、Top…left 会触发layout与paint，而-webkit-transform只触发整个页面composite 重组 <a href="http://csstriggers.com" target="_blank">http://csstriggers.com</a></li>
+							<li class="fragment">避免DOM 树太深，改变子节点将引起整个父节点乃至整个根节点的Reflow;</li>
+							<li class="fragment">css3 最耗性能属性 border-radius 、box-shadow、transform、gradient
+     (实时描绘，然后放到内存中)，Position:absolute、fixed 用 CPU，translate、用GPU, translate3D耗电，Retain 屏更加消耗内存; </li>
+							<li class="fragment">will-change 提前渲染 <a href="https://dev.opera.com/articles/css-will-change-property" target="_blank">https://dev.opera.com/articles/css-will-change-property</a>&nbsp;
+   <a href="http://www.tuicool.com/articles/qu6ZZ3M" target="_blank">http://www.tuicool.com/articles/qu6ZZ3M</a><br>will-change:transform,opacity;</li>
+						</ol>
+					</section>
+					<section>
+						<h3>坑</h3>
+						<img src="img/img10.jpg" class="fragment">
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#007777">
+						      <ol>
+						      	  <li class="fragment">三星 Android 浏览器Tab(如：酒店城市选择页)动画无效，JS引起一次Reflow方可;</li>
+						      	  <li class="fragment">Android2.3 动画不动100%要留一帧空出来。在100%之前写一个最后值 99%那里写@-webkit-keyframes demo {
+       0% { opacity: 0; }
+       99% {opacity: 1;}
+      100% {}
+  }
+</li>
+						      	  <li class="fragment">Android 4.4.2 Note3 执行opacity动画，浮层会闪烁<br>延长动画执行时间;<br>设置动画当前追加的classname opacity值=动画结束状态；
+</li>
+						      	  <li class="fragment">伪类不支持动画 (Android 低版本 )</li>
+						      	  <li class="fragment">元素状态由 Relative  变成 Fixed 会抖动</li>
+						      </ol>
+					</section>
+					
+				</section>
+
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2>舒适愉快的动画需给合</h2>
+					<ul>
+						<li class="fragment">物体质量</li>
+						<li class="fragment">大小</li>
+						<li class="fragment">力</li>
+						<li class="fragment">惯性</li>
+						<li class="fragment">视觉连贯性(清晰表达而非困扰，引导用户注意力而    非分散)</li>
+						<li class="fragment">动作一致性</li>
+						<li class="fragment">UI的无缝衔接</li>
+						<li class="fragment">整体美感</li>
+						<li class="fragment">。。。。。。</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>创意+情感化设计</h2>
+					<a href="https://dash.readme.io/login" target="_blank">https://dash.readme.io/login</a>
+				</section>
+
+
+				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+					<p>
+						Google I/O 2014 Material Design<bR>
+<a href="http://ericlva.github.io/animation/Material-design.mp4" target="_blank">
+http://ericlva.github.io/animation/Material-design.mp4</a>
+					</p>
+				</section>
+
+				
+
+
+				<section>
+					<h1>THE END</h1>
+					<img src="img/img11.jpg" >
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
