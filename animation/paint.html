@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>paint</title>
+	<style type="text/css">
+	.control {
+		padding: 1em;
+		color: red;
+		text-shadow:1px 1px 0 #800000;
+	}
+	.control label {
+		margin-right: 4em;
+	}
+	.container  {
+		overflow: hidden;
+		text-align: center;
+	}
+	.box {
+		display: inline-block;
+		width: 20em;
+		height: 20em;
+		margin: 1em;
+		padding: 2em;
+		background: #f88;
+		color: fff;
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+	body {
+		background-image:url(http://c.hiphotos.baidu.com/image/pic/item/314e251f95cad1c875d82d3b7c3e6709c93d514f.jpg);
+	}
+	.fixed {
+		position: absolute;
+	}
+	.radius {
+		border-radius: 2em;
+	}
+	.shadow {
+		box-shadow: 0 0 32px 0 #000;
+	}
+	.textshadow {
+		text-shadow: 1px 1px 4px #c00;
+	}
+	.gradient {
+		background: linear-gradient(to bottom, #ff8888 1%,#ff4444 51%,#ff8888 100%);
+	}
+	</style>
+</head>
+<body>
+
+<div class="control">
+	<label><input type="checkbox" value="fixed">absolute</label>
+	<label><input type="checkbox" value="radius">border-radius</label>
+	<label><input type="checkbox" value="shadow">box-shadow</label>
+	<label><input type="checkbox" value="textshadow">text-shadow</label>
+	<label><input type="checkbox" value="gradient">gradient</label>
+</div>
+
+<div class="container">
+	<div class="box"> 11111</div>
+	<div class="box">1111</div>
+	<div class="box">1111</div>
+	<div class="box"> 111</div>
+	<div class="box">11</div>
+	<div class="box">111</div>
+	<div class="box">1111</div>
+	<div class="box">1111</div>
+	<div class="box"> 1111</div>
+	<div class="box">111</div>
+	<div class="box"> 1111</div>
+	<div class="box">1111</div>
+	<div class="box">1111</div>
+	<div class="box"> 1111</div>
+	<div class="box">1111 </div>
+	<div class="box">1111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box"> 111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box"> 111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+	<div class="box">111</div>
+</div>
+
+<script type="text/javascript">
+var checkboxes = [].slice.call(document.querySelectorAll('.control input'));
+var boxes = [].slice.call(document.querySelectorAll('.box'));
+var changeHandler = function (e) {
+	var checkbox = e.target;
+	var className = checkbox.value;
+	if (className == 'fixed') {
+		document.body.classList.toggle(className);
+	}
+	boxes.forEach(function(box){
+		box.classList.toggle(className);
+	});
+}
+checkboxes.forEach(function(checkbox){
+	checkbox.addEventListener('change', changeHandler, false);
+});
+</script>
+
+</body>
+</html>
