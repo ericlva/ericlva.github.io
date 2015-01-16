@@ -162,7 +162,7 @@
 							<li class="fragment">尽量不触发Layout，使用transform代替top, left的动画 ，transform只触发整个页面composite 重组 <a href="http://csstriggers.com" target="_blank">http://csstriggers.com</a></li>
 							<li class="fragment">避免DOM 树太深，改变子节点将引起整个父节点乃至整个根节点的Reflow,尽量避免触发layout;</li>
 							<li class="fragment">css3 最耗性能属性gradient
-     (实时描绘，然后放到内存中) 、box-shadow、 border-radius 、，Position:absolute、fixed 用 CPU，translate、用GPU, translate3D耗电，Retain 屏更加消耗内存;<a href="http://ericlva.github.io/animation/paint.html" target="_blank">
+     (实时描绘，放到内存中) 、box-shadow、 border-radius 、text-shadow，Position:absolute、fixed 用 CPU，translate、用GPU, translate3D耗电，Retain 屏更加消耗内存;<a href="http://ericlva.github.io/animation/paint.html" target="_blank">
 http://ericlva.github.io/animation/paint.html</a> </li>
 							<li class="fragment">will-change 提前渲染 <a href="https://dev.opera.com/articles/css-will-change-property" target="_blank">https://dev.opera.com/articles/css-will-change-property</a>&nbsp;
    <a href="http://www.tuicool.com/articles/qu6ZZ3M" target="_blank">http://www.tuicool.com/articles/qu6ZZ3M</a><br>will-change:transform,opacity;</li>
