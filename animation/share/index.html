@@ -123,25 +123,50 @@
 						<img src="img/img7.jpg" class="fragment">
 					</section>
 					<section>
-						<p class="fragment">使用position:absolute 、fixed做动画，避免发生渲染树的连带渲染行为，也就是Reflow(重排)、Repaint (重绘)</p>
+						<embed width="240" height="320" src="http://boallen.com/assets/flash/fps-compare/fps-compare-15fps.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="window" devicefont="false" bgcolor="#1e1e1e" name="fps-compare-15fps" menu="true" allowfullscreen="false" allowscriptaccess="sameDomain" salign="" type="application/x-shockwave-flash">
+
+						<embed width="240" height="320" src="http://boallen.com/assets/flash/fps-compare/fps-compare-60fps.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="window" devicefont="false" bgcolor="#1e1e1e" name="fps-compare-60fps" menu="true" allowfullscreen="false" allowscriptaccess="sameDomain" salign="" type="application/x-shockwave-flash">
+					</section>
+					<section>
+						<p>使用position:absolute 、fixed做动画，避免发生渲染树的连带渲染行为，也就是Reflow(重排)、Repaint (重绘)</p>
 						<img src="img/img8.jpg" class="fragment">
 					</section>
 					<section>
 						<p class="fragment">启用GPU 加速</p>
 						<img src="img/img9.jpg" class="fragment">
 					</section>
+					<section style="top:-450px!important;">
+						 <h3>cpu</h3>
+						 <img src="img/cpu-gpu.png" width="480">
+					</section>
+					<section style="top:-400px!important;">
+						 <h3>gpu</h3>
+						 <img src="img/gpu.png" width="550">
+					</section>
 					<section>
-						<p class="fragment">CSS属性</p>
+						  <h3>节省了哪些时间？</h3>
+						  <ol>
+							<li class="fragment">CPU进行Layout, Paint的时间</li>
+							<li class="fragment">CPU向GPU传输位图的时间</li>
+						 </ol>
+					</section>
+					<section>
+						<h3>渲染</h3>
+						<img src="img/img12.jpg" class="fragment">
+					</section>
+					<section>
+						<p>CSS属性</p>
 						<ol>
 							<li class="fragment">避免不必要的复杂的CSS选择器，将消耗更多的CPU;</li>
-							<li class="fragment">Transform 优于 Left 、Top…left 会触发layout与paint，而-webkit-transform只触发整个页面composite 重组 <a href="http://csstriggers.com" target="_blank">http://csstriggers.com</a></li>
-							<li class="fragment">避免DOM 树太深，改变子节点将引起整个父节点乃至整个根节点的Reflow;</li>
-							<li class="fragment">css3 最耗性能属性 border-radius 、box-shadow、transform、gradient
+							<li class="fragment">尽量不触发Layout，使用transform代替top, left的动画 ，transform只触发整个页面composite 重组 <a href="http://csstriggers.com" target="_blank">http://csstriggers.com</a></li>
+							<li class="fragment">避免DOM 树太深，改变子节点将引起整个父节点乃至整个根节点的Reflow,尽量避免触发layout;</li>
+							<li class="fragment">css3 最耗性能属性 border-radius 、box-shadow、gradient
      (实时描绘，然后放到内存中)，Position:absolute、fixed 用 CPU，translate、用GPU, translate3D耗电，Retain 屏更加消耗内存; </li>
 							<li class="fragment">will-change 提前渲染 <a href="https://dev.opera.com/articles/css-will-change-property" target="_blank">https://dev.opera.com/articles/css-will-change-property</a>&nbsp;
    <a href="http://www.tuicool.com/articles/qu6ZZ3M" target="_blank">http://www.tuicool.com/articles/qu6ZZ3M</a><br>will-change:transform,opacity;</li>
 						</ol>
 					</section>
+
 					<section>
 						<h3>坑</h3>
 						<img src="img/img10.jpg" class="fragment">
