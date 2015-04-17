@@ -40,13 +40,14 @@ h2 {font-size: 12px;}
 .icon-html5:before { content: "\eadf"; }
 
 /*common*/
+body {overflow: hidden;}
 .c1{color: #ccc}
 .ellips {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .flex{display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; }
 .v-1{-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1;}
 .v-center { -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
 /*left*/
-.l {width: 260px;background-color: #3d4450;color:#fff;}
+.l {width: 260px;background-color: #3d4450;color:#fff;position: fixed;top:0;left:0;height: 100%;}
 .l h2 {text-shadow: 1px 1px 0 rgba(0,0,0,.3);}
 .l i {margin-right: 8px;}
 .author {padding:10px;border-bottom: 1px solid #262c35;box-shadow: 0 1px 0 0 rgba(255,255,255,.1)}
@@ -60,7 +61,7 @@ h2 {font-size: 12px;}
 .folder .item:hover {-webkit-transform:translate3d(-2px,0,0);transform:translate3d(-2px,0,0);}
 
 /*right*/
-.r {background-color: #f0f0f0 }
+.r {background-color: #f0f0f0;padding-left: 260px;height: 100%; }
 .r h2{font-size: 21px;margin-right: auto}
 .r-t {height: 71px; padding:20px 30px;}
 .r-t .icon-plus {cursor: pointer;font-size: 20px;color: rgba(0,0,0,.65);}
@@ -72,26 +73,29 @@ h2 {font-size: 12px;}
 .btn-sure:active{background-color: rgba(252, 116, 101,1);}
 .btn-cancle:active {background-color: rgba(61, 68, 80,1);}
 /*search*/
+.search {z-index: 2}
 .search .form-group{padding:5px 10px;background-color: rgba(255,255,255,1);margin-top: 5px;box-shadow: 0 0 10px rgba(0,0,0,.2)}
 .search .form-group .icon-search {font-size: 22px;color: #ddd}
 .search .form-group .txt {border:0 none;height: 40px;padding: 5px 10px;background-color: transparent;font-weight: 700}
-.search .drop-down{display: none;width: 100%; position: absolute; z-index: 2; top:50px;left:0;background-color: rgba(36, 45, 50, 0.9); color: rgba(255, 255, 255, 0.95); max-height: 185px; overflow-x: hidden; overflow-y: scroll; }
+.search .drop-down{width: 100%; position: absolute; z-index: 2; top:50px;left:0;background-color: rgba(36, 45, 50, 0.9); color: rgba(255, 255, 255, 0.95); max-height: 185px; overflow-x: hidden; overflow-y: scroll; }
 .search .drop-down li a {color:#fff;padding: 8px 15px;display: block;-webkit-animation: fade-in-up 40ms ease-out;}
 .search .drop-down li a strong {color: #fc7465;}
 .search .drop-down li a:hover { background: rgba(255, 255, 255, 0.075); color: #fc7465; }
-.search .drop-down::-webkit-scrollbar { width: 3px; }
-.search .drop-down::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.15); }
-.search .drop-down::-webkit-scrollbar-thumb { background: rgba(241, 129, 95, 1); }
-
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.15); }
+::-webkit-scrollbar-thumb { background: rgba(241, 129, 95, 1); }
+.search .drop-down::-webkit-scrollbar-thumb { background:  rgba(255,255,255, .55); }
 /*list*/
-.items {margin-right: 30px;}
+.items {padding-right: 30px;max-height: calc(100% - 121px);overflow-x: hidden; overflow-y: scroll; }
 .items li {width: 20%;float: left;}
-.items li .inner {background-color: #fff;margin:40px 0px 0 30px;-webkit-transition: all 300ms cubic-bezier(0.65, -1, 0.25, 2.5);border-radius:2px;position: relative;display: block;}
+.items li .inner {background-color: #fff;margin:40px 0px 0 30px;-webkit-transition: all 300ms cubic-bezier(0.65, -1, 0.25, 2.5);border-radius:2px;position: relative;display: block;cursor: pointer;border-bottom: 2px solid transparent;}
+.items li .inner.search-current {border-color: #fc7465;}
 .items li .inner:hover{  -webkit-transform: translateY(-0.3rem);
   box-shadow: 0 10px 16px -4px rgba(36, 45, 50, 0.15);}
-.items li .default-bg {}
+.items li .bg:after {background: rgba(36, 45, 50, 0.2);display: block;height: 100%;width: 100%;content: "";} 
 .items li .inner .bg {width: 100%;height: 130px;}
-.items li .inner h3 {padding: 0 10px 5px;font-size: 13px;color: #666}
+.items li .inner h3 {padding:5px 10px 0;font-size: 13px;color: #333;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.items li .inner h4 {padding:5px 10px 10px;font-size: 12px;color: #999;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 @-webkit-keyframes fade-in-up {
   from { opacity: 0; -webkit-transform: translateY(20px); }
   to { opacity: 1; -webkit-transform: translateY(0); }}
@@ -157,7 +161,7 @@ h2 {font-size: 12px;}
 	 	  	   <div class="search pr">
 	 	  	   	    <div class="form-group flex v-center">
 	 	  	   	    	 <i class="icon-search"></i>
-	 	  	   	    	 <input type="text" class="txt v-1" placeholder="搜索...">
+	 	  	   	    	 <input type="text" class="txt v-1" placeholder="搜索..." autocomplete="on">
 	 	  	   	    </div>
 					
 					<ul class="drop-down">
@@ -173,45 +177,114 @@ h2 {font-size: 12px;}
 	 	  	   <ul class="items">
 	 	  	   	   <li>
 						<div class="inner">
-							<div class="default-bg"></div>
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   	   <li>
 						<div class="inner">
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://mgr.release.ctripcorp.com/static/ropv2/img/RM-LOGO4-01.png) no-repeat center center;"></div>
+						    <h3>conf.ctripconrp</h3>
+						    <h4>http://conf.ctripcorp.com/pages/viewpage.action?pageId=54476541</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner search-current">
+						    <div class="bg" style="background: #fff url(http://cp4.mgmt.ctripcorp.com/s/zh_CNh9tpbc-1988229788/6144/37/_/jira-logo-scaled.png) no-repeat center center;"></div>
+						    <h3>CP4</h3>
+						    <h4>http://cp4.mgmt.ctripcorp.com/secure/Dashboard.jspa?selectPageId=16000</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   	   <li>
 						<div class="inner">
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   	   <li>
 						<div class="inner">
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   	   <li>
 						<div class="inner">
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   	   <li>
 						<div class="inner">
 						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
 						    <h3>携程旅行网</h3>
-						    <h3>http://www.ctrip.com</h3>
+						    <h4>http://www.ctrip.com</h4>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background: #fff url(http://ericlva.github.io/bookmark/loader.gif) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h4>http://www.ctrip.com</h4>
 						</div>
 	 	  	   	   </li>
 	 	  	   </div>
