@@ -8,6 +8,7 @@
 html,body,.m {height: 100%;}
 *:not(img), *:before, *:after { box-sizing: border-box }
 body, div,ul,li,dl,dt,dd, p,h1,h2,h3,h4 { margin: 0; padding: 0; }
+li{list-style: none;}
 body, button, input, select, textarea { font: 400 14px/1.5 arial, Simsun, sans-serif; font-family: 'microsoft yahei', Arial, sans-serif; }
 a { color: #333; text-decoration: none }
 a:hover { color: #fc7465;text-decoration: none;-webkit-transition:all 200ms linear;transition:all 200ms linear;}
@@ -17,6 +18,7 @@ img {display: block;}
 .pr {position: relative;}
 h1 {font-size: 16px;line-height: 1.6}
 h2 {font-size: 12px;}
+/*font-face*/
 @font-face { font-family: 'icomoon'; src: url('fonts/icomoon.eot?-as75s8'); src: url('fonts/icomoon.eot?#iefix-as75s8') format('embedded-opentype'), url('fonts/icomoon.woff?-as75s8') format('woff'), url('fonts/icomoon.ttf?-as75s8') format('truetype'), url('fonts/icomoon.svg?-as75s8#icomoon') format('svg'); font-weight: normal; font-style: normal; }
 [class^="icon-"], [class*=" icon-"] { font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1;	/* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .icon-cross:before { content: "\e600"; }
@@ -37,37 +39,53 @@ h2 {font-size: 12px;}
 .icon-android:before { content: "\eac1"; }
 .icon-html5:before { content: "\eadf"; }
 
+/*common*/
 .c1{color: #ccc}
 .ellips {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .flex{display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; }
 .v-1{-webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1;}
 .v-center { -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+/*left*/
 .l {width: 260px;background-color: #3d4450;color:#fff;}
 .l h2 {text-shadow: 1px 1px 0 rgba(0,0,0,.3);}
 .l i {margin-right: 8px;}
-
 .author {padding:10px;border-bottom: 1px solid #262c35;box-shadow: 0 1px 0 0 rgba(255,255,255,.1)}
 .author .hd img {width: 50px;height: 50px;margin-right: 10px;border-radius: 100%;box-shadow: 0 0 3px rgba(0,0,0,.35);}
 .folder {padding:20px 0;}
 .folder dt {padding-left:10px ;color: rgba(255,255,255,.65);text-shadow:1px 1px 0 rgba(0,0,0,.35);}
-.folder .item .icon-cross {display: none;font-size: 16px;}
-.folder .item:hover .icon-cross {float:right;display: inline-block;margin-top: 3px;}
+.folder .item .icon-cross {float:right;display: none;font-size: 16px;margin-top: 3px;}
+.folder .item:hover .icon-cross {display: inline-block;}
 .folder .item {width: 100%;padding:8px 5px 8px 25px;color: #fff;display: block;}
 .folder .item:hover {color: #fc7465;background-color:#262c35 }
-.folder .item:hover {-webkit-transform:translate3d(-2px,0,0);}
+.folder .item:hover {-webkit-transform:translate3d(-2px,0,0);transform:translate3d(-2px,0,0);}
 
+/*right*/
 .r {background-color: #f0f0f0 }
 .r h2{font-size: 21px;margin-right: auto}
-.r-t {height: 71px; padding:20px 30px;background-color: #fff;box-shadow: 0 0 5px rgba(0,0,0,.2)}
+.r-t {height: 71px; padding:20px 30px;}
 .r-t .icon-plus {cursor: pointer;font-size: 20px;color: rgba(0,0,0,.65);}
 .r-t .icon-plus:hover {color: #fc7465;}
-.add-fav .txt{border:none;padding: 10px;background-color:rgba(0,0,0,.1);}
-.add-fav .txt:focus::-webkit-input-placeholder {text-indent: -100%;-webkit-transition:text-indent .65s linear;}
+.add-fav .txt{border:none;padding: 10px;background-color:rgba(255,255,255,.65);}
+.add-fav .txt:focus::-webkit-input-placeholder {text-indent: -145px;-webkit-transition:text-indent .65s linear;}
 .btn-sure {background-color: rgba(252, 116, 101,.6);padding:10px;margin-right: 1px;}
-.btn-cancle {background-color: rgba(61, 68, 80,.6);padding:10px;color:#fff;}
+.btn-cancle {padding:10px;color:#fff;}
 .btn-sure:active{background-color: rgba(252, 116, 101,1);}
 .btn-cancle:active {background-color: rgba(61, 68, 80,1);}
-.search {}
+/*search*/
+.search .form-group{padding:5px 10px;background-color: rgba(255,255,255,1);margin-top: 5px;box-shadow: 0 0 10px rgba(0,0,0,.2)}
+.search .form-group .icon-search {font-size: 22px;color: #ddd}
+.search .form-group .txt {border:0 none;height: 40px;padding: 5px 10px;background-color: transparent;font-weight: 700}
+.search .drop-down{display: none;width: 100%; position: absolute;top:50px;left:0;background-color: rgba(36, 45, 50, 0.95); color: rgba(255, 255, 255, 0.95); max-height: 185px; overflow-x: hidden; overflow-y: scroll; }
+
+.search .drop-down li a {color:#fff;padding: 8px 15px;display: block;-webkit-animation: fade-in-up 40ms ease-out;}
+.search .drop-down li a strong {color: #fc7465;}
+.search .drop-down li a:hover { background: rgba(255, 255, 255, 0.075); color: #fc7465; }
+.search .drop-down::-webkit-scrollbar { width: 3px; }
+.search .drop-down::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.15); }
+.search .drop-down::-webkit-scrollbar-thumb { background: rgba(241, 129, 95, 1); }
+@-webkit-keyframes fade-in-up {
+  from { opacity: 0; -webkit-transform: translateY(20px); }
+  to { opacity: 1; -webkit-transform: translateY(0); }}
 </style>
 </head>
 <body>
@@ -120,13 +138,32 @@ h2 {font-size: 12px;}
 	 	  	   	    <h2 class="v-1">全部</h2>
 	 	  	   	    <!--Star 添加 URL-->
 	 	  	   	    <div class="add-fav flex v-1">
-		 	  	   	    <input type="text" class="txt v-1" placeholder="请输入你要收藏的URL, 如：http://www.ctrip.com">
+		 	  	   	    <input type="text" class="txt v-1" placeholder="输入要收藏的URL, 如：http://www.ctrip.com">
 		 	  	   	    <button class="btn-sure">添加</button>
 		 	  	   	    <button class="btn-cancle">取消</button>
 		 	  	   </div>
 	 	  	   </div>
 	 	  	  
 	 	  	   <!--Star Search-->
+	 	  	   <div class="search pr">
+	 	  	   	    <div class="form-group flex v-center">
+	 	  	   	    	 <i class="icon-search"></i>
+	 	  	   	    	 <input type="text" class="txt v-1" placeholder="搜索...">
+	 	  	   	    </div>
+					
+					<ul class="drop-down">
+						<li><a href="###">啊，西湖<strong>的</strong>水，我<strong>的</strong>泪。</a></li>
+						<li><a href="###">欢迎使用 Facebook - 登录、注册或详细了解,关注TA<strong>的</strong>状态</a></li>
+						<li><a href="###">取房型可<strong>的</strong>用优惠券与用户收藏的优惠券<strong>的</strong>交集</a></li>
+						<li><a href="###">若优惠券有<strong>的</strong>效期也相同，按SOA返回<strong>的</strong>顺序排列</a></li>
+						<li><a href="###">啊，西湖<strong>的</strong>水，我<strong>的</strong>泪。</a></li>
+						<li><a href="###">欢迎使用 Facebook - 登录、注册或详细了解,关注TA<strong>的</strong>状态</a></li>
+					</ul>
+	 	  	   </div>
+
+	 	  	   <ul class="items">
+	 	  	   	   <li>ddd</li>
+	 	  	   </div>
 	 	  </div>
 	 </div>
 </body>
