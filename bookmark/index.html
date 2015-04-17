@@ -75,14 +75,23 @@ h2 {font-size: 12px;}
 .search .form-group{padding:5px 10px;background-color: rgba(255,255,255,1);margin-top: 5px;box-shadow: 0 0 10px rgba(0,0,0,.2)}
 .search .form-group .icon-search {font-size: 22px;color: #ddd}
 .search .form-group .txt {border:0 none;height: 40px;padding: 5px 10px;background-color: transparent;font-weight: 700}
-.search .drop-down{display: none;width: 100%; position: absolute;top:50px;left:0;background-color: rgba(36, 45, 50, 0.95); color: rgba(255, 255, 255, 0.95); max-height: 185px; overflow-x: hidden; overflow-y: scroll; }
-
+.search .drop-down{display: none;width: 100%; position: absolute; z-index: 2; top:50px;left:0;background-color: rgba(36, 45, 50, 0.9); color: rgba(255, 255, 255, 0.95); max-height: 185px; overflow-x: hidden; overflow-y: scroll; }
 .search .drop-down li a {color:#fff;padding: 8px 15px;display: block;-webkit-animation: fade-in-up 40ms ease-out;}
 .search .drop-down li a strong {color: #fc7465;}
 .search .drop-down li a:hover { background: rgba(255, 255, 255, 0.075); color: #fc7465; }
 .search .drop-down::-webkit-scrollbar { width: 3px; }
 .search .drop-down::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.15); }
 .search .drop-down::-webkit-scrollbar-thumb { background: rgba(241, 129, 95, 1); }
+
+/*list*/
+.items {margin-right: 30px;}
+.items li {width: 20%;float: left;}
+.items li .inner {background-color: #fff;margin:40px 0px 0 30px;-webkit-transition: all 300ms cubic-bezier(0.65, -1, 0.25, 2.5);border-radius:2px;position: relative;display: block;}
+.items li .inner:hover{  -webkit-transform: translateY(-0.3rem);
+  box-shadow: 0 10px 16px -4px rgba(36, 45, 50, 0.15);}
+.items li .default-bg {}
+.items li .inner .bg {width: 100%;height: 130px;}
+.items li .inner h3 {padding: 0 10px 5px;font-size: 13px;color: #666}
 @-webkit-keyframes fade-in-up {
   from { opacity: 0; -webkit-transform: translateY(20px); }
   to { opacity: 1; -webkit-transform: translateY(0); }}
@@ -162,7 +171,49 @@ h2 {font-size: 12px;}
 	 	  	   </div>
 
 	 	  	   <ul class="items">
-	 	  	   	   <li>ddd</li>
+	 	  	   	   <li>
+						<div class="inner">
+							<div class="default-bg"></div>
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
+	 	  	   	   <li>
+						<div class="inner">
+						    <div class="bg" style="background:url(http://pic.c-ctrip.com/common/c_logo2013.png) no-repeat center center;"></div>
+						    <h3>携程旅行网</h3>
+						    <h3>http://www.ctrip.com</h3>
+						</div>
+	 	  	   	   </li>
 	 	  	   </div>
 	 	  </div>
 	 </div>
