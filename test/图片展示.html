@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片展示</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+	<style type="text/css">
+	* {margin:0;padding:0;}
+	body {font: 400 14px/1.5 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei}
+	*:not(img), *:before, *:after { box-sizing: border-box}
+	img{-webkit-animation:fadeIn 350ms cubic-bezier(0.18, 0.89, 0.32, 1.28);animation:fadeIn 350ms cubic-bezier(0.18, 0.89, 0.32, 1.28);;}
+	h1 {background-color: #e6232c;padding: 5px;text-align: center;color: #fff}
+	h2 {text-align: center;padding:5px;}
+	/*Responsive img*/
+	.image-gallery {width: 90%;margin: 20px auto}
+	.image-gallery img {max-width: 100%;border:0;display: block;margin-bottom: 10px;-webkit-column-gap: 10px;column-gap: 10px;}
+	@media only screen and (min-width : 320px) and (max-width : 480px) {
+		.image-gallery {
+			-webkit-column-count:2;
+			column-count:2;
+		}
+	}
+	@media only screen and (min-width : 481px) and (max-width : 768px) {
+		.image-gallery {
+			-webkit-column-count:4;
+			column-count:4;
+		}
+	}
+	@media only screen and (min-width : 769px) and (max-width : 1680px) {
+		.image-gallery {
+			-webkit-column-count:6;
+			column-count:6;
+		}
+	}
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	/*image-xn*/
+	.image-xn p{padding: 10px}
+	</style>
+</head>
+<body>
+	 <h1>图片展示</h1>
+	 <h2>Responsive Image</h2>
+	 <div class="image-gallery">
+	 	  <img src="http://placekitten.com/200/287" alt="">
+	 	  <img src="http://placekitten.com/200/150" alt="">
+	 	  <img src="http://placekitten.com/200/139" alt="">
+	 	  <img src="http://placekitten.com/200/238" alt="">
+	 	  <img src="http://placekitten.com/200/252" alt="">
+	 	  <img src="http://placekitten.com/200/108" alt="">
+	 	  <img src="http://placekitten.com/200/302" alt="">
+	 </div>
+
+	 <h1>图片性能</h1>
+	 <div class="image-xn">
+	 	  <p>img src="default.jpg" Srcset=""</p>
+	 </div>
+	 <h2>图片压缩</h2>
+	 <div class="image-xn">
+	 	  <p>img src="default.jpg" Srcset=""</p>
+	 </div>
+	 
+	 <h1>图片滤镜</h1>
+	 <div>dd</div>
+	 
+</body>
+</html>
