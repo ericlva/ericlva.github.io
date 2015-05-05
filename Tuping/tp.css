@@ -1,10 +1,9 @@
 * {margin:0;padding:0;}
 body,h1,h2,h3 {font: 400 14px/1.2 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei}
 img,img[src]{-webkit-animation:fadeIn 550ms linear;animation:fadeIn 550ms linear;}
-body {background-color: #eff0f5;color: #333}
+body {background-color: #f4f4f4;color: #333}
 
 li{list-style: none;}
-.p10 {padding: 10px;}
 
 /*Star Font-face*/
 @font-face {
@@ -36,7 +35,7 @@ li{list-style: none;}
 .i-list .item .msg {border-style: solid; border-color:#ddd;border-image:url(ddata:image/gif;base64,R0lGODlhBQAFAIABAN3d3f///yH5BAEAAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;-webkit-border-image:url(data:image/gif;base64,R0lGODlhBQAFAIABAN3d3f///yH5BAEAAAEALAAAAAAFAAUAAAIHhB9pGatnCgA7) 2 stretch;}
 
 /*Star common*/
-.tp-header { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; }
+.tp-header,.i-list .item .interact{ display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; }
 .tp-header { -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
 .tp-header { webkit-box-pack: center; -moz-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; }
 /*Star Head*/
@@ -44,7 +43,7 @@ li{list-style: none;}
 
 
 /*Star Index*/
-.i-list .item {width: 100%;background-color: #fff; border-radius:3px;overflow: hidden;margin-bottom: 10px;position: relative;}
+.i-list .item {width: 100%;background-color: #fff; overflow: hidden;margin-bottom: 10px;position: relative;}
 .i-list .item .user {padding: 10px;}
 .i-list .item .user img{width: 30px;height: 30px;border-radius: 50%;float: left;margin-right: 10px;}
 .i-list .item .user h3 {font-size: 13px;}
@@ -53,9 +52,12 @@ li{list-style: none;}
 .i-list .item .msg .pic {width: 100%;height: 140px; overflow: hidden;}
 .i-list .item .msg .pic img {width: 100%;display: block;}
 .i-list .item .msg .info {font-size:16px;position: absolute;bottom:10px;left:10px;right:10px;color:#fff;padding:35px 10px 8px;box-shadow: 0 -26px 20px rgba(0,0,0,.35) inset}
-.i-list .item .interact {padding: 10px;color:#888;}
-.i-list .item .interact .inline{display: inline-block;width: 40px}
-.i-list .item .interact .inline.current {color:#445bad ;}
+.i-list .item .interact {padding:10px;}
+.i-list .item .interact .inline{padding:10px;color:#fff;-webkit-box-flex: 1;-webkit-flex: 1;text-align: center;-webkit-transition:all 150ms ease;border-radius: 2px;}
+.i-list .item .interact .inline:active {opacity: .85;-webkit-transform:scale(.95);box-shadow: 0 0 15px rgba(0,0,0,.25)}
+.bg1{background-color: #d3524d;text-shadow:1px 1px 0 #b42f2a;}
+.bg2{background-color: #079c86;text-shadow:1px 1px 0 #037766;margin:0 10px}
+.bg3{background-color: #ff9a14;text-shadow:1px 1px 0 #d17700;}
 
 
 /*Star Animation*/
