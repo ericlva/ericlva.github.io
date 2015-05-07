@@ -131,6 +131,8 @@ a{text-decoration: none;}
 #photo_single {
     position: relative;
     margin: 0px auto;
+    min-width: 200px;
+    min-height: 300px;
     text-align: center;
     /*padding-bottom: 5px*/
 }
