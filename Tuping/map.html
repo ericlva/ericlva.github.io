@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+<link rel="stylesheet" href="tp.css">
+<style type="text/css">
+html{height:100%}
+body{height:100%;margin:0px;padding:0px}
+#container{height:calc(100% - 44px)}
+</style>
+<script type="text/javascript"
+src="http://webapi.amap.com/maps?v=1.3&key=0b895f63ca21c9e82eb158f46fe7f502">
+</script>
+<script type="text/javascript">
+var tool,view,scale,circleEditor;
+function initialize(){
+  var position=new AMap.LngLat(116.397428,39.90923);
+  var mapObj=new AMap.Map("container",{
+  view: new AMap.View2D({//创建地图二维视口
+	  center:position,//创建中心点坐标
+	  zoom:13, //设置地图缩放级别
+	  rotation:0 //设置地图旋转角度
+	 }),
+	 lang:"en"//设置地图语言类型，默认：中文简体
+	});//创建地图实例
+  
+  mapObj.plugin(["AMap.ToolBar","AMap.OverView","AMap.Scale","AMap.CircleEditor"],function(){
+	  //加载工具条
+	  tool = new AMap.ToolBar({
+	    direction:false,//隐藏方向导航
+	    ruler:false,//隐藏视野级别控制尺
+	    autoPosition:false//禁止自动定位
+	  });
+	  mapObj.addControl(tool);
+	  //加载鹰眼
+	  view = new AMap.OverView();
+	  mapObj.addControl(view);
+	  //加载比例尺
+	  scale = new AMap.Scale();
+	  mapObj.addControl(scale);
+	  //初始化待编辑的圆实例
+		var circle = new AMap.Circle({
+		    map: mapObj,
+		    center:new AMap.LngLat("116.40332221984863","39.90025505675715"),
+		    radius:1000,
+		    fillOpacity:0.3
+		});
+	  //实例化时指定地图对象
+      circleEditor = new AMap.CircleEditor(mapObj,circle);
+
+	});
+  AMap.event.addListener(mapObj,"click",function(){
+  	console.log(circleEditor);
+  	circleEditor.close();
+  	mapObj.removeControl(circleEditor);
+  });
+}
+</script>
+</head>
+ 
+<body onload="initialize()">
+	<!--Star Header-->
+	 <div class="header">
+	 	  <div class="hd">
+	 	  	   <a href="detail.html"><i class="icon-chevron-thin-left"></i></a>
+	 	  	   <h2>悉尼四季酒店(Four Seasons Hotel Sydney)</h2>
+	 	  </div>
+	 </div>
+	<div id="container"></div>
+</body>
+</html>

@@ -2,32 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>图片展示</title>
+	<title>Detail</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
 	<link rel="stylesheet" href="tp.css">
 </head>
 <body>
 	 <!--Star Header-->
 	 <div class="header">
-	 	  <div class="hd">精选图片</div>
+	 	  <div class="hd">
+	 	  	   <a href="main.html"><i class="icon-chevron-thin-left"></i></a>
+	 	  	   <h2>Detail</h2>
+	 	  	   <i class="icon-export"></i>
+	 	  	   <a href="map.html"><i class="icon-location"></i></a>
+	 	  </div>
 	 </div>
 
 	 <!--Star body-->
-	 <div class="wrap">
-	 	  <!--Star slider-->
-	 	  <div class="slider">
-		  	  <ul class="img-slider">
-		  	  	  <li><img src="http://dimg02.c-ctrip.com/images/tg/140/706/328/23f7be72e5a94755be9a248b09edbe8f_C_400_200.jpg"></li>
-		  	  </ul>
-		  	  <div class="nav-slider">
-		  	  	   <span class="item current"></span>
-		  	  	   <span class="item"></span>
-		  	  	   <span class="item"></span>
-		  	  	   <span class="item"></span>
-		  	  </div>
-	  	  </div>
-	  	  
-	 </div>
-	
+	 <div class="content">
+		<h1><a href="###">author's name</a></h1>
+		<h2><a href="###">Hawaii</a></h2>
+	</div>
+
+ 	  <!--Star slider-->
+ 	  <section id="site_wrap">
+			<div id="photo_single" class=" show">
+				<a href="">
+					<img src="http://app.resrc.it/S=H680/http://files.lumo.me/photos/5ef28e5aa668244a7e310ec54962ca2d111d966c.jpg" alt="" onload="this.parentNode.parentNode.className = this.parentNode.parentNode.className + ' show';" data-big="http://files.lumo.me/photos/5ef28e5aa668244a7e310ec54962ca2d111d966c_big.jpg">
+					<span></span>
+				</a>
+				<div class="nav-slider">
+					 <span class="item"></span>
+					 <span class="item current"></span>
+					 <span class="item"></span>
+					 <span class="item"></span>
+				</div>
+				<button type="button" class="g-buy">Buy</button>
+			</div>
+			<div class="caption"><i class="icon-location"></i>&nbsp;GPS: 33 voie des sculpteurs,92800 Puteaux,POST:34 cours michelet</div>
+			<!-- <a href="###" class="nav-arrow prev show" title="Previous"><i class="icon-chevron-thin-left"></i></a>
+			<a href="###" class="nav-arrow next show" title="Next"><i class="icon-chevron-thin-right"></i></a> -->
+			
+	  </section>
 </body>
 </html>
