@@ -1,9 +1,10 @@
 * { margin: 0; padding: 0; }
 body, h1, h2, h3 { font: 400 14px/1.2 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei }
 body { background-color: #fff; color: #333 }
+button,button:active {border: 0;outline: none;}
 li { list-style: none; }
 a{text-decoration: none;}
-
+.g-a {color:#099FDE}
 /*Star Font-face*/
 @font-face {
 	font-family: 'icomoon';
@@ -71,11 +72,8 @@ a{text-decoration: none;}
 .header .hd { width: 100%; height: 44px; position: fixed; top: 0; left: 0; z-index: 9; text-align: center; background-color: #535f93; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6a76aa), color-stop(100%, #445082)), #535f93; background: -webkit-linear-gradient(#6a76aa, #445082), #535f93; background: -moz-linear-gradient(#6a76aa, #445082), #535f93; background: -o-linear-gradient(#6a76aa, #445082), #535f93; background: linear-gradient(#6a76aa, #445082), #535f93; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px }
 .header .hd h2 {margin: 0 auto;font-size: 18px;}
 /*Star Detail*/
-.slider { width: 100%; height: 180px; position: relative; }
-.slider .img-slider img { width: 100%; height: 180px; }
-.slider .nav-slider { position: absolute; left: 50%; -webkit-transform: translateX(-50%); bottom: 10px; }
-.slider .nav-slider .item { width: 6px; height: 6px; background-color: rgba(255, 255, 255, .4); border-radius: 50%; float: left; margin-right: 8px }
-.slider .nav-slider .item.current { background-color: rgba(255, 255, 255, 1) }
+
+
 
 /*Star Media*/
 @media only screen and (min-width:320px) and (max-width:460px) {
@@ -126,7 +124,7 @@ a{text-decoration: none;}
     color: #1b1c1d
 }
 
-.content h2 a:hover {
+.content h2 a:hover{
     color: #65696c
 }
 
@@ -187,8 +185,8 @@ a{text-decoration: none;}
 }
 
 #photo_single .nav-slider { position: absolute; left: 50%; -webkit-transform: translateX(-50%); bottom:10px; }
-#photo_single .nav-slider .item { width: 6px; height: 6px; background-color: rgba(0, 0, 0, .2); border-radius: 50%; float: left; margin-right: 8px }
-#photo_single .nav-slider .item.current { background-color: rgba(0, 0, 0, .55) }
+#photo_single .nav-slider .item { width: 6px; height: 6px; background-color: rgba(255,255,255, .35); border-radius: 50%; float: left; margin-right: 8px }
+#photo_single .nav-slider .item.current { background-color: rgba(255,255,255, .95) }
 
 #site_wrap {position: relative;}
 /*.nav-arrow {color: rgba(255,255,255,.75);font-size: 35px;position: absolute;top:50%;-webkit-transform:translateY(-50%);}
