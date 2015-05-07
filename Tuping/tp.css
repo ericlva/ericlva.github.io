@@ -177,7 +177,7 @@ a{text-decoration: none;}
 
 .caption {
     margin: 10px;
-    line-height: 1.3em;
+    line-height: 2.35em;
     max-width: 100%;
     color: #888
 }
@@ -196,7 +196,7 @@ a{text-decoration: none;}
 .prev {left:10px;}
 .next {right:10px;}*/
 
-.g-buy { font-size: 18px; color: #fff; padding: 10px 50px; border: 0; background-color: rgba(83, 95, 147, 0.47); position: absolute; bottom: 0px; right: 0px; z-index: 9 }
+.g-buy { font-size: 18px; color: #fff; padding: 6px 20px; border: 0; background-color: rgba(83, 95, 147, 1); border-radius:3px; float: right;}
 /*Star Animation*/
 @-webkit-keyframes fadeIn {
 	0% { opacity: 0; }
