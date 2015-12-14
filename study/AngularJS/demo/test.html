@@ -6,9 +6,13 @@
     <script src="../lib/angular.min.js"></script>
 </head>
 <body>
-    hello {{'d'}}
-    <input type="text" ng-model="objdate">
-    <hr>
-    hello {{objdate + '111' }}
+    hello {{'ABC'}}
+    <input type="text" ng-model="name">
+     {{name || ''}}
+     
+     <div>
+         1+2 = {{ 1 + 2 }}
+     </div>
+    
 </body>
-</html>
+</html>;
